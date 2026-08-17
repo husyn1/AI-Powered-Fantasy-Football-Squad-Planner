@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --neon: #00FF80;
+  --bg:   #0B0E13;
+  --card: #141920;
+  --border: #1E2530;
+}
+
+body {
+  background-color: var(--bg);
+  color: #E6EDF3;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+}
+
+/* ── Card ─────────────────────────────────────────────────────────────────── */
+.card {
+  background-color: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+}
+
+/* ── Cluster / style badges ──────────────────────────────────────────────── */
+.badge-conservative {
+  background: rgba(0, 255, 128, 0.12);
+  color: #00FF80;
+  border: 1px solid rgba(0, 255, 128, 0.25);
+}
+.badge-volatile {
+  background: rgba(240, 180, 41, 0.12);
+  color: #F0B429;
+  border: 1px solid rgba(240, 180, 41, 0.25);
+}
+.badge-aggressive {
+  background: rgba(248, 81, 73, 0.12);
+  color: #F85149;
+  border: 1px solid rgba(248, 81, 73, 0.25);
+}
+
+/* ── Scrollbar ────────────────────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #2a3545; }
